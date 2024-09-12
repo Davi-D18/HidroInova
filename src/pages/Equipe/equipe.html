@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipe</title>
+  <link rel="stylesheet" href="equipe.css">
+</head>
+<body>
+
+  <header>
+    <h1>Projeto de Tratamento de Água Dura</h1>
+    <nav>
+      <ul>
+        <li><a href="../../../home.html">Home</a></li>
+        <li><a href="#">Equipe</a></li>
+        <li><a href="#features">Demanda</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Seção dos membros da equipe -->
+    <section class="team-section">
+      <!-- Cada membro da equipe é um "card" -->
+      <div class="team-member" data-name="Ana Souza" data-role="Coordenação Geral" data-description="Ana é responsável pela coordenação geral do projeto, cuidando do planejamento estratégico e garantindo que todos os prazos sejam cumpridos." data-img="membro1.jpg">
+        <img src="membro1.jpg" alt="Foto de Ana Souza">
+        <h2>Ana Souza</h2>
+        <p>Coordenação Geral</p>
+      </div>
+  
+      <div class="team-member" data-name="Carlos Silva" data-role="Desenvolvedor Líder" data-description="Carlos é o desenvolvedor líder, responsável por todo o desenvolvimento back-end e pela integração das APIs utilizadas no sistema." data-img="membro2.jpg">
+        <img src="membro2.jpg" alt="Foto de Carlos Silva">
+        <h2>Carlos Silva</h2>
+        <p>Desenvolvedor Líder</p>
+      </div>
+  
+      <div class="team-member" data-name="Maria Oliveira" data-role="Design de Interface" data-description="Maria é especialista em design de interface e é a mente criativa por trás da identidade visual do projeto." data-img="membro3.jpg">
+        <img src="membro3.jpg" alt="Foto de Maria Oliveira">
+        <h2>Maria Oliveira</h2>
+        <p>Design de Interface</p>
+      </div>
+  
+      <div class="team-member" data-name="João Costa" data-role="Segurança do Sistema" data-description="João é o responsável pela segurança do sistema, cuidando da criptografia dos dados e garantindo que as informações sensíveis estejam protegidas." data-img="membro4.jpg">
+        <img src="membro4.jpg" alt="Foto de João Costa">
+        <h2>João Costa</h2>
+        <p>Segurança do Sistema</p>
+      </div>
+    </section>
+  
+    <!-- Modal para informações expandidas -->
+    <div class="overlay" id="overlay">
+      <div class="overlay-content">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <img id="overlayImg" src="" alt="Foto do Membro">
+        <h2 id="overlayName"></h2>
+        <p id="overlayRole"></p>
+        <p id="overlayDescription"></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2024 Projeto de Tratamento de Água Dura. Todos os direitos
+        reservados.
+      </p>
+    </footer>
+
+  </main>
+
+
+  <script src="equipe.js"></script>
+
+</body>
+</html>

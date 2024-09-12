@@ -1,0 +1,119 @@
+:root {
+  --min-celulares: 481px;
+  --max-celulares: 767px;
+  --min-tablets: 768px;
+  --max-tablets: 1023px;
+  --laptops: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif
+}
+
+body {
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Header da página */
+
+header {
+  background: #00BFFF;
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: rgba(0, 0, 0, 0.719);
+}
+
+section {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #00BFFF;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.cta-button {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem 0;
+  background: #00BFFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.cta-button:hover {
+  background-color: rgba(61, 61, 61, 0.253);
+  
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
