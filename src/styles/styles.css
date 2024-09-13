@@ -4,6 +4,8 @@
   --min-tablets: 768px;
   --max-tablets: 1023px;
   --laptops: 1200px;
+
+  --backgound-blue: #0a4d8f;
 }
 
 html {
@@ -28,10 +30,23 @@ body {
 /* Header da página */
 
 header {
-  background: #00BFFF;
+  /* background: #00BFFF; */
+  background-color: var(--backgound-blue);
   color: #fff;
   padding: 1.5rem 0;
   text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.logo {
+  width: auto;
+  height: 100px;
+  filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.25));
 }
 
 nav {
@@ -55,10 +70,13 @@ nav ul li a {
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s;
+  font-weight: 500;
 }
 
 nav ul li a:hover {
   color: rgba(0, 0, 0, 0.719);
+  transform: scale(1.05);
+  transition: color 0.3s;
 }
 
 section {
@@ -70,12 +88,95 @@ section {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-footer {
-  background: #00BFFF;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
+/* Container geral do footer */
+.footer {
+  background-color: #062e57;
+  color: #ffffff;
+  padding: 40px 0;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex-basis: 22%;
+  margin: 20px 0;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f0a500;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #f0a500;
+}
+
+.social-media a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Estilo da parte inferior */
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  background-color: #092929;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.numero {
+  cursor: pointer;
+}
+
+.numero::before {
+  content: '🔗';
+  margin-right: 5px;
+}
+
+@media (max-width: var(--min-celulares)) {
+  .footer-section {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .container {
+    justify-content: center;
+  }
+}
+
 
 .cta-button {
   display: block;
@@ -115,5 +216,22 @@ footer {
 .form-group textarea {
   height: 100px;
   resize: vertical;
+}
+
+@media (max-width: var(--min-celulares)) {
+  header > h1 {
+    font-size: 1.5em;
+    max-width: 80vw;
+    margin: auto;
+  }
+
+  nav > ul > li {
+    margin-inline: 0.9rem;
+  }
+
+  section {
+    max-width: 95vw;
+  }
+
 }
 

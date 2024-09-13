@@ -1,3 +1,7 @@
+:root {
+  --backgound-blue: #0a4d8f;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,8 +20,7 @@ body {
 }
 
 header {
-  background: #00BFFF;
-
+  background: var(--backgound-blue);
   color: #fff;
   padding: 1.5rem 0;
   text-align: center;
@@ -50,7 +53,6 @@ nav ul li a:hover {
   color: #80cbc4;
 }
 
-
 /* Seção da equipe */
 .team-section {
   display: flex;
@@ -73,16 +75,16 @@ nav ul li a:hover {
   position: relative;
 }
 .team-member:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .team-member img {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
 }
 .team-member h2 {
-  margin-top: 15px;
+  margin-top: 3px;
   font-size: 1.5em;
   color: #333;
 }
@@ -122,10 +124,11 @@ nav ul li a:hover {
   border-radius: 10px;
   position: relative;
   transform: scale(0.95); /* Ajuste da animação inicial para celulares */
-  transition: transform 0.4s ease, opacity 0.3s ease; /* Animação para expandir */
+  transition: all 0.6s ease; /* Animação para expandir */
 }
 .overlay.active .overlay-content {
   transform: scale(1); /* Expansão suave */
+  transition: all 0.6s ease;
 }
 
 /* Estilização da imagem e texto do modal */
@@ -151,18 +154,38 @@ nav ul li a:hover {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 24px;
+  font-size: 35px;
   color: #333;
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
+  line-height: 0.8;
+}
+
+.close-btn:hover {
+  color: #d11616be;
+  transition: color 0.3s ease-in;
 }
 
 /* Responsividade para dispositivos móveis */
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
+  header > h1 {
+    font-size: 1.5em;
+    max-width: 80vw;
+    margin: auto;
+  }
+
+  nav > ul > li {
+    margin-inline: 0.9rem;
+  }
+
   .team-member {
     width: 90%;
+  }
+
+  .close-btn:hover {
+    color: black;
   }
 
   .team-member:hover {
@@ -188,11 +211,174 @@ nav ul li a:hover {
 }
 
 footer {
+  background-color: #062e57;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex-basis: 22%;
+  margin: 20px 0;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f0a500;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section p {
+  max-width: 350px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #f0a500;
+}
+
+.social-media a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Estilo da parte inferior */
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  /* background-color: #122557; */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+.numero {
+  cursor: pointer;
+}
+
+.cta-button {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem 0;
   background: #00BFFF;
   color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-  position: fixed;
-  bottom: 0;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.cta-button:hover {
+  background-color: rgba(61, 61, 61, 0.253);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
   width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    flex-basis: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .social-media {
+    margin-top: 20px;
+  }
+
+  .cta-button {
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .footer-section h4 {
+    font-size: 16px;
+  }
+
+  .footer-section p,
+  .footer-section ul {
+    font-size: 12px;
+  }
+
+  .social-media a {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+  .footer-bottom p {
+    font-size: 10px;
+  }
 }
