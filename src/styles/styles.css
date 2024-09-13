@@ -89,7 +89,7 @@ section {
 }
 
 /* Container geral do footer */
-.footer {
+footer {
   background-color: #062e57;
   color: #ffffff;
   padding: 40px 0;
@@ -117,6 +117,10 @@ section {
 .footer-section p, .footer-section ul {
   font-size: 14px;
   line-height: 1.6;
+}
+
+.footer-section p {
+  max-width: 350px;
 }
 
 .footer-section ul {
@@ -148,35 +152,19 @@ section {
 .footer-bottom {
   text-align: center;
   padding: 20px;
-  background-color: #092929;
+  /* background-color: #122557; */
 }
 
 .footer-bottom p {
   margin: 0;
   font-size: 14px;
   color: #ffffff;
+  margin-top: 2rem;
 }
 
 .numero {
   cursor: pointer;
 }
-
-.numero::before {
-  content: '🔗';
-  margin-right: 5px;
-}
-
-@media (max-width: var(--min-celulares)) {
-  .footer-section {
-    flex-basis: 100%;
-    text-align: center;
-  }
-
-  .container {
-    justify-content: center;
-  }
-}
-
 
 .cta-button {
   display: block;
@@ -193,7 +181,6 @@ section {
 
 .cta-button:hover {
   background-color: rgba(61, 61, 61, 0.253);
-  
 }
 
 .form-group {
@@ -218,20 +205,59 @@ section {
   resize: vertical;
 }
 
-@media (max-width: var(--min-celulares)) {
-  header > h1 {
-    font-size: 1.5em;
-    max-width: 80vw;
-    margin: auto;
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  nav > ul > li {
-    margin-inline: 0.9rem;
+  .footer-section {
+    flex-basis: 100%;
+    margin: 10px 0;
+    text-align: center;
   }
 
-  section {
-    max-width: 95vw;
+  .social-media {
+    margin-top: 20px;
   }
 
+  .cta-button {
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
 }
 
+@media (max-width: 480px) {
+  .cta-button {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .footer-section h4 {
+    font-size: 16px;
+  }
+
+  .footer-section p,
+  .footer-section ul {
+    font-size: 12px;
+  }
+
+  .social-media a {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+  .footer-bottom p {
+    font-size: 10px;
+  }
+}

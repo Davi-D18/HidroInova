@@ -382,3 +382,50 @@ footer {
     font-size: 10px;
   }
 }
+
+.mentor-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffcc00; /* Cor do badge */
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo quando o card é de um mentor */
+.team-member.mentor {
+  border: 2px solid #ffcc00; /* Destaque na borda */
+}
+
+.team-member.mentor h2 {
+  color: #ffcc00; 
+  font-weight: 600;
+}
+
+.lider-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #88e2e2; 
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.team-member.lider {
+  border: 2px solid #88e2e2; 
+}
+
+.team-member.lider h2 {
+  color: #88e2e2; 
+  font-weight: 600;
+}
+
+
