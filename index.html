@@ -7,74 +7,98 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/styles/styles.css" />
   </head>
   <body>
     <header>
-      <img class="logo" src="src/assets/images/logo.png" alt="">
-      <h1>Projeto de Tratamento de Água Dura</h1>
-      <!-- <nav>
+      <img class="logo" src="src/assets/images/logo.png" alt="" />
+
+      <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="../../../index.html">Início</a></li>
           <li><a href="./src/pages/Equipe/equipe.html">Equipe</a></li>
-          <li><a href="#features">Demanda</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="#services">Demanda</a></li>
         </ul>
-      </nav> -->
+      </nav>
     </header>
 
     <main>
-      <section id="home">
-        <h2>Bem-vindo ao Projeto</h2>
-        <p>
-          Descubra como nosso sistema automatizado melhora a qualidade da água.
-        </p>
-      </section>
-
-      <section id="about">
-        <h2>Sobre o Projeto</h2>
-        <p>Saiba mais sobre a história e a motivação por trás do projeto.</p>
-      </section>
-
-      <section id="features">
-        <h2>Funcionalidades</h2>
-        <ul>
-          <li>Automatização da Dosagem de Químicos</li>
-          <li>Monitoramento da Dureza da Água</li>
-          <li>Controle de pH</li>
-        </ul>
-      </section>
-
-      <!-- <section id="contact">
-        <h2>Contato</h2>
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required />
+      <div class="container-cards">
+        <section id="projeto">
+          <div class="container-icon">
+            <img
+              class="icon lampada"
+              src="./src/assets/icons/lampada.svg"
+              alt=""
+            />
           </div>
-
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+          <h2>Projeto</h2>
+          <p>
+            Nosso sistema de tratamento de água dura visa proporcionar água de
+            qualidade, acessível e tratada para todos. A automatização no
+            controle da dosagem química e monitoramento constante da dureza da
+            água garantem que o processo seja eficiente e seguro.
+          </p>
+        </section>
+        <section id="demanda">
+          <div class="container-icon">
+            <img
+              class="icon grafico-barras"
+              src="./src/assets/icons/grafico-barras.svg"
+              alt=""
+            />
           </div>
-
-          <div class="form-group">
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea>
+          <h2>Demanda</h2>
+          <p>
+            A empresa Beplast enfrenta o desafio de descartar 30% da água usada em seu processo produtivo devido à alta mineralização, tornando-a imprópria para uso industrial. A solução buscada visa reduzir o desperdício, reutilizar a água de maneira eficiente e atender aos ODS 8 e 9.
+          </p>
+        </section>
+        <section id="equipe">
+          <div class="container-icon">
+            <img
+              class="icon grupo-pessoas"
+              src="./src/assets/icons/grupo-pessoas.svg"
+              alt=""
+            />
           </div>
+          <h2>Equipe</h2>
+          <p>
+            Nossa equipe multidisciplinar é composta por especialistas em
+            automação, monitoramento de qualidade da água e desenvolvimento
+            sustentável. Juntos, trabalhamos para criar uma solução que atenda
+            às necessidades das comunidades locais.
+          </p>
+        </section>
 
-          <button type="submit" class="cta-button">Enviar Mensagem</button>
-        </form>
-      </section> -->
+        <section id="canvas">
+          <div class="container-icon">
+            <img
+              class="icon quebra-cabeca"
+              src="./src/assets/icons/quebra-cabeca-.svg"
+              alt=""
+            />
+          </div>
+          <h2>Canvas</h2>
+          <p>
+            Nossa proposta de valor é baseada na automação eficiente e no
+            monitoramento contínuo. Ao conectar tecnologia e sustentabilidade,
+            garantimos um processo de tratamento acessível e de fácil
+            manutenção.
+          </p>
+        </section>
+      </div>
 
       <footer class="footer">
-        <div class="container">
+        <div class="container-footer">
           <div class="footer-section">
             <h4>Sobre Nós</h4>
-            <p>Fornecemos soluções sustentáveis e acessíveis para o tratamento de água e preservação ambiental.</p>
+            <p>
+              Fornecemos soluções sustentáveis e acessíveis para o tratamento de
+              água e preservação ambiental.
+            </p>
           </div>
           <div class="footer-section">
             <h4>Links Rápidos</h4>
@@ -87,16 +111,16 @@
           <div class="footer-section">
             <h4>Contato</h4>
             <ul>
-              <li class="numero"><a href="https://wa.me/qr/DS2USKWSE7OKN1" target="_blank">+55 11 1234-5678</a></li>
+              <li class="numero">
+                <a href="https://wa.me/qr/DS2USKWSE7OKN1" target="_blank"
+                  >+55 86 9589-1652</a
+                >
+              </li>
               <li class="email">info.hidroinova@gmail.com</li>
             </ul>
           </div>
-          
         </div>
-       
       </footer>
-
     </main>
-  
   </body>
 </html>

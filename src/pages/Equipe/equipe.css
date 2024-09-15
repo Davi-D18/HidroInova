@@ -13,24 +13,29 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
 
-  margin: 0;
-  padding: 0;
   background-color: #f4f4f4;
   overflow-x: hidden;
 }
 
+/* Cabeçaçalho */
+
 header {
   background: var(--backgound-blue);
-  color: #fff;
   padding: 1.5rem 0;
+  color: #fff;
   text-align: center;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-nav {
+header > nav {
   margin-top: 1rem;
 }
 
-nav ul {
+header > nav > ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -38,21 +43,33 @@ nav ul {
   margin: 0;
 }
 
-nav ul li {
+header > nav > ul > li {
   margin: 0 1rem;
 }
 
-nav ul li a {
+header > nav > ul > li > a {
   color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s;
+  font-weight: 500;
+  position: relative;
 }
 
-nav ul li a:hover {
-  color: #80cbc4;
+header > nav > ul > li > a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #fff; 
+  left: 0;
+  bottom: -3px; /* Distância do texto */
+  transition: width 0.3s ease-in-out; /* Transição suave */
 }
 
+header > nav > ul > li > a:hover::after {
+  width: 100%;
+}
 /* Seção da equipe */
 .team-section {
   display: flex;
@@ -73,25 +90,88 @@ nav ul li a:hover {
   transition: transform 0.3s ease;
   cursor: pointer;
   position: relative;
+
+  opacity: 0;
+  animation: slideIn 0.5s ease forwards;
 }
+
+.team-member:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.team-member:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.team-member:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
 .team-member:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
-.team-member img {
+.team-member > img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
   object-fit: cover;
 }
-.team-member h2 {
+.team-member > h2 {
   margin-top: 3px;
   font-size: 1.5em;
-  color: #333;
+  font-weight: 700;
+  color: #88e2e2; 
 }
-.team-member p {
+
+.team-member > p {
   font-size: 1em;
   color: #666;
   margin-top: 10px;
+}
+
+.mentor-badge:hover, .lider-badge:hover, .membro-badge:hover {
+  background-color: #f0a500;
+  transition: background-color 0.3s ease;
+}
+
+/* Badges nos cards */
+
+.mentor-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffcc00; /* Cor do badge */
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.mentor {
+  border: 2px solid #ffcc00; 
+}
+
+.mentor > h2 {
+  color: #ffcc00; 
+  font-weight: 700;
+}
+
+.lider-badge, .membro-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #88e2e2; 
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.lider, .membro {
+  border: 2px solid #88e2e2; 
 }
 
 /* Estilo para a janela expandida */
@@ -111,7 +191,9 @@ nav ul li a:hover {
 }
 .overlay.active {
   display: flex;
-  opacity: 1;
+  opacity: 0;
+  display: flex;
+  animation: fadeIn 0.5s forwards;
 }
 
 /* Estilização do conteúdo da janela expandida */
@@ -123,16 +205,17 @@ nav ul li a:hover {
   text-align: center;
   border-radius: 10px;
   position: relative;
-  transform: scale(0.95); /* Ajuste da animação inicial para celulares */
-  transition: all 0.6s ease; /* Animação para expandir */
+  transform: scale(0.95); 
+  transition: all 0.6s ease; 
 }
+
 .overlay.active .overlay-content {
-  transform: scale(1); /* Expansão suave */
+  transform: scale(1); 
   transition: all 0.6s ease;
 }
 
 /* Estilização da imagem e texto do modal */
-.overlay-content img {
+.overlay-content > img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
@@ -168,55 +251,14 @@ nav ul li a:hover {
   transition: color 0.3s ease-in;
 }
 
-/* Responsividade para dispositivos móveis */
-@media (max-width: 600px) {
-  header > h1 {
-    font-size: 1.5em;
-    max-width: 80vw;
-    margin: auto;
-  }
-
-  nav > ul > li {
-    margin-inline: 0.9rem;
-  }
-
-  .team-member {
-    width: 90%;
-  }
-
-  .close-btn:hover {
-    color: black;
-  }
-
-  .team-member:hover {
-    transform: translateY(0);
-  }
-
-  /* Ajustes no tamanho da imagem e do texto no modal para celular */
-  .overlay-content img {
-    width: 150px;
-    height: 150px;
-  }
-  .overlay-content h2 {
-    font-size: 1.5em;
-  }
-  .overlay-content p {
-    font-size: 1em;
-  }
-
-  /* Ajuste da transição de crescimento */
-  .overlay-content {
-    transform: scale(0.80); /* Animação ajustada para parecer mais natural em telas menores */
-  }
-}
-
+/* Rodapé */
 footer {
   background-color: #062e57;
   color: #ffffff;
   padding: 40px 0;
 }
 
-.container {
+.container-footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -229,54 +271,46 @@ footer {
   margin: 20px 0;
 }
 
-.footer-section h4 {
+.footer-section > h4 {
   font-size: 18px;
   margin-bottom: 10px;
   color: #f0a500;
 }
 
-.footer-section p, .footer-section ul {
+.footer-section > p, .footer-section > ul {
   font-size: 14px;
   line-height: 1.6;
 }
 
-.footer-section p {
+.footer-section > p {
   max-width: 350px;
 }
 
-.footer-section ul {
+.footer-section > ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-section ul li {
+.footer-section > ul > li {
   margin-bottom: 10px;
 }
 
-.footer-section ul li a {
+.footer-section > ul > li > a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.footer-section ul li a:hover {
+.footer-section > ul > li > a:hover {
   color: #f0a500;
-}
-
-.social-media a {
-  margin-right: 10px;
-  font-size: 18px;
-  color: #ffffff;
-  text-decoration: none;
 }
 
 /* Estilo da parte inferior */
 .footer-bottom {
   text-align: center;
   padding: 20px;
-  /* background-color: #122557; */
 }
 
-.footer-bottom p {
+.footer-bottom > p {
   margin: 0;
   font-size: 14px;
   color: #ffffff;
@@ -287,48 +321,64 @@ footer {
   cursor: pointer;
 }
 
-.cta-button {
-  display: block;
-  padding: 0.75rem 1.5rem;
-  margin: 1rem 0;
-  background: #00BFFF;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.5s;
-}
+@media (max-width: 480px) {
+  .footer-section > h4 {
+    font-size: 16px;
+  }
 
-.cta-button:hover {
-  background-color: rgba(61, 61, 61, 0.253);
-}
+  .footer-section > p,
+  .footer-section > ul {
+    font-size: 12px;
+  }
 
-.form-group {
-  margin-bottom: 1rem;
-}
+  .social-media > a {
+    font-size: 16px;
+    margin-right: 5px;
+  }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.form-group textarea {
-  height: 100px;
-  resize: vertical;
+  .footer-bottom > p {
+    font-size: 10px;
+  }
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .container {
+  header > h1 {
+    font-size: 1.5em;
+    max-width: 80vw;
+    margin: auto;
+  }
+
+  nav > ul > li {
+    margin-inline: 0.9rem;
+  }
+
+  .team-member {
+    width: 80%;
+  }
+
+  .team-member:hover {
+    transform: translateY(0);
+  }
+
+  /* Ajustes no tamanho da imagem e do texto no modal para celular */
+  .overlay-content > img {
+    width: 150px;
+    height: 150px;
+  }
+  .overlay-content > h2 {
+    font-size: 1.5em;
+  }
+  .overlay-content > p {
+    font-size: 1em;
+  }
+
+  /* Ajuste da transição de crescimento */
+  .overlay-content {
+    transform: scale(0.80);
+  }
+
+  .container-footer {
     flex-direction: column;
     align-items: center;
   }
@@ -339,93 +389,44 @@ footer {
     text-align: center;
   }
 
-  .social-media {
-    margin-top: 20px;
-  }
-
-  .cta-button {
-    margin: 10px auto;
-    width: 80%;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-  }
-
   .footer-bottom p {
+    font-size: 12px;
+  }
+
+  .container-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    flex-basis: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .footer-bottom > p {
     font-size: 12px;
   }
 }
 
-@media (max-width: 480px) {
-  .cta-button {
-    width: 100%;
-    padding: 0.5rem;
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-
-  .footer-section h4 {
-    font-size: 16px;
-  }
-
-  .footer-section p,
-  .footer-section ul {
-    font-size: 12px;
-  }
-
-  .social-media a {
-    font-size: 16px;
-    margin-right: 5px;
-  }
-
-  .footer-bottom p {
-    font-size: 10px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.mentor-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #ffcc00; /* Cor do badge */
-  color: #fff;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-
-/* Estilo quando o card é de um mentor */
-.team-member.mentor {
-  border: 2px solid #ffcc00; /* Destaque na borda */
-}
-
-.team-member.mentor h2 {
-  color: #ffcc00; 
-  font-weight: 600;
-}
-
-.lider-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #88e2e2; 
-  color: #fff;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.team-member.lider {
-  border: 2px solid #88e2e2; 
-}
-
-.team-member.lider h2 {
-  color: #88e2e2; 
-  font-weight: 600;
-}
-
-

@@ -8,6 +8,7 @@ const overlayRole = document.getElementById('overlayRole');
 const overlayDescription = document.getElementById('overlayDescription');
 const closeBtn = document.getElementById('closeBtn');
 
+
 // Função para abrir o modal com animação suave
 teamMembers.forEach(member => {
   member.addEventListener('click', () => {
@@ -41,13 +42,13 @@ closeBtn.addEventListener('click', () => {
 });
 
 // Fecha o modal ao clicar fora do conteúdo com animação suave
-overlay.addEventListener('click', (e) => {
+overlay.addEventListener("click", (e) => {
   if (e.target === overlay) {
-    overlayContent.style.transform = 'scale(0.9)';
-    overlayContent.style.opacity = '0';
+    overlayContent.style.transform = "scale(0.9)";
+    overlayContent.style.opacity = "0";
 
     setTimeout(() => {
-      overlay.classList.remove('active');
+      overlay.classList.remove("active");
     }, 300);
   }
 });
