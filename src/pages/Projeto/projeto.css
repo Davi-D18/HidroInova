@@ -1,6 +1,6 @@
 :root {
   --backgound-blue: #0a4d8f;
- } 
+}
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #f8f8f8;
   color: #333;
 }
@@ -109,7 +109,7 @@ section {
 /* Estilo para fórmulas químicas */
 .reaction {
   display: block;
-  font-family: 'Courier New', monospace; /* Fonte para fórmulas */
+  font-family: "Courier New", monospace; /* Fonte para fórmulas */
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 15px;
@@ -126,7 +126,8 @@ section {
 }
 
 /* Estilo para subscritos e sobrescritos */
-.sub, .sup {
+.sub,
+.sup {
   font-size: 0.8rem;
 }
 
@@ -185,12 +186,14 @@ section {
   margin-bottom: 20px;
 }
 
-.content ul, .content ol {
+.content ul,
+.content ol {
   margin-left: 20px;
   margin-bottom: 20px;
 }
 
-.content ul li, .content ol li {
+.content ul li,
+.content ol li {
   margin-bottom: 10px;
 }
 
