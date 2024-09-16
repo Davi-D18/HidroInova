@@ -1,0 +1,311 @@
+:root {
+  --backgound-blue: #0a4d8f;
+ } 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--backgound-blue);
+  padding: 1.5rem 0;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+header > h1 {
+  font-size: 2.5rem;
+}
+
+header > h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+nav > ul > li {
+  margin: 0 1rem;
+}
+
+nav > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+  font-weight: 500;
+  position: relative;
+}
+
+nav > ul > li > a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  left: 0;
+  bottom: -3px; /* Distância do texto */
+  transition: width 0.3s ease-in-out; /* Transição suave */
+}
+
+nav > ul > li > a:hover::after {
+  width: 100%;
+}
+
+section {
+  padding: 20px;
+}
+
+.summary-item {
+  flex: 1;
+  min-width: 300px;
+  background-color: #e6f7ff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.summary-item h3 {
+  font-size: 1.8rem;
+  color: #3a6ea5;
+  margin-bottom: 10px;
+}
+
+/* Formulas e compostos */
+
+.formulas {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para fórmulas químicas */
+.reaction {
+  display: block;
+  font-family: 'Courier New', monospace; /* Fonte para fórmulas */
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #e9f5ff;
+  border-left: 4px solid #3a6ea5;
+  border-radius: 4px;
+}
+
+/* Estilo para os compostos dentro das fórmulas */
+.compound {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Estilo para subscritos e sobrescritos */
+.sub, .sup {
+  font-size: 0.8rem;
+}
+
+/* Adicionando classe para indicar a fase de precipitação ou outro estado */
+.reaction .compound.solid {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.reaction .compound.liquid {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.reaction .compound.gas {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.reaction .compound.aqueous {
+  color: #fd7e14;
+  font-weight: bold;
+}
+
+/* Conteúdo */
+
+.summary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  max-width: 1260px;
+  margin: auto;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content article {
+  margin-bottom: 40px;
+}
+
+.content h3 {
+  font-size: 1.8rem;
+  color: #3a6ea5;
+  margin-bottom: 15px;
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
+.content ul, .content ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.content ul li, .content ol li {
+  margin-bottom: 10px;
+}
+
+/* Resultados Esperados */
+.results {
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-left: 5px solid #3a6ea5;
+  border-radius: 8px;
+}
+
+.results p {
+  margin-bottom: 15px;
+}
+
+/* Container geral do footer */
+footer {
+  background-color: #062e57;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex-basis: 22%;
+  margin: 20px 0;
+}
+
+.footer-section > h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f0a500;
+}
+
+.footer-section > p,
+.footer-section > ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section > p {
+  max-width: 350px;
+}
+
+.footer-section > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section > ul > li {
+  margin-bottom: 10px;
+}
+
+.footer-section > ul > li > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section > ul > li > a:hover {
+  color: #f0a500;
+}
+
+/* Estilo da parte inferior */
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-bottom > p {
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+.numero {
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    flex-basis: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .footer-bottom > p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 481px) {
+  .footer-section > h4 {
+    font-size: 16px;
+  }
+
+  .footer-section > p,
+  .footer-section > ul {
+    font-size: 12px;
+  }
+
+  .footer-bottom > p {
+    font-size: 10px;
+  }
+}
