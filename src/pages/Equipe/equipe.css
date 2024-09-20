@@ -1,5 +1,5 @@
 :root {
-  --backgound-blue: #0a4d8f;
+  --background-blue: #002959;
 }
 
 * {
@@ -20,7 +20,7 @@ body {
 /* Cabeçaçalho */
 
 header {
-  background: var(--backgound-blue);
+  background: var(--background-blue);
   padding: 1.5rem 0;
   color: #fff;
   text-align: center;

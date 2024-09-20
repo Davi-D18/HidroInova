@@ -35,6 +35,7 @@
           <p>BEPLAST NORDESTE INDUSTRIA E COMERCIO DE PLASTICOS LTDA</p>
         </div>
       </section>
+
       <section class="content">
         <article class="introduction">
           <h3>Introdução</h3>
@@ -72,14 +73,17 @@
               a ação de produtos químicos.
             </li>
           </ul>
+
           <p>Alguns sinais de que a água é dura incluem:</p>
-          <ul>
+
+          <ul class="sinais-agua-dura">
             <li>Manchas brancas em vidros e óculos.</li>
             <li>Roupas que parecem ásperas após a lavagem.</li>
             <li>Pele seca após o banho.</li>
             <li>Restos de calcário em chaleiras e outros utensílios.</li>
           </ul>
         </article>
+
         <article class="process">
           <h3>Processo de Remoção de Dureza</h3>
           <p>
@@ -87,10 +91,13 @@
             um método eficaz e bastante utilizado. Esse processo é conhecido
             como precipitação química. Aqui está um resumo de como funciona:
           </p>
+
+          <p class="tutorial">Clique ou passe o mouse sobre os compostos para ver mais informações sobre eles.</p>
+
           <ol>
             <li>
               <strong
-                >Adição de Cal (<span class="compound">CaO</span>):</strong
+                >Adição de Cal (<span class="compound solid" data-name="Cal" data-type="Sólido">CaO</span>):</strong
               >
               A cal é adicionada à água para elevar o pH, tornando a água mais
               alcalina. Isso facilita a precipitação dos íons de cálcio e
@@ -98,8 +105,8 @@
             </li>
             <li>
               <strong
-                >Adição de Bicarbonato de Sódio (<span class="compound"
-                  >NaHCO₃</span
+                >Adição de Bicarbonato de Sódio (<span class="compound solid"
+                data-name="Bicarbonato de Sódio" data-type="Sólido">NaHCO<sub>3</sub></span
                 >):</strong
               >
               O bicarbonato de sódio é adicionado para fornecer íons de cálcio e
@@ -108,28 +115,37 @@
             </li>
           </ol>
           <p>As principais reações químicas são:</p>
-          <pre>
-    <span class="reaction">
-    <span class="compound solid">Ca(OH)<sub>2</sub></span> +
-    <span class="compound aqueous">Ca(HCO<sub>3</sub>)<sub>2</sub></span>
-    → <span class="compound solid">2CaCO<sub>3</sub></span><sup>↓</sup> +
-    <span class="compound liquid">2H<sub>2</sub>O</span>
-    </span>
-    
-    <span class="reaction">
-    <span class="compound solid">Mg(OH)<sub>2</sub></span> +
-    <span class="compound aqueous">Ca(HCO<sub>3</sub>)<sub>2</sub></span>
-    → <span class="compound solid">CaCO<sub>3</sub></span><sup>↓</sup> +
-    <span class="compound solid">MgCO<sub>3</sub></span><sup>↓</sup> +
-    <span class="compound liquid">2H<sub>2</sub>O</span>
-    </span>
-        </pre>
+          <section id="chemical-reactions">
+            <div class="reaction">
+      
+              <div class="formula">
+                <span class="compound solid" data-name="Hidróxido de Cálcio" data-type="Sólido">Ca(OH)<sub>2</sub></span> +
+                <span class="compound aqueous" data-name="Bicarbonato de Cálcio" data-type="Aquoso">Ca(HCO<sub>3</sub>)<sub>2</sub></span>
+                → <span class="compound solid" data-name="Carbonato de Cálcio" data-type="Sólido">2CaCO<sub>3</sub></span><sup>↓</sup> +
+                <span class="compound liquid" data-name="Água" data-type="Líquido">2H<sub>2</sub>O</span>
+              </div>
+
+            </div>
+          
+            <div class="reaction">
+             
+              <div class="formula">
+                <span class="compound solid" data-name="Hidróxido de Magnésio" data-type="Sólido">Mg(OH)<sub>2</sub></span> +
+                <span class="compound aqueous" data-name="Bicarbonato de Cálcio" data-type="Aquoso">Ca(HCO<sub>3</sub>)<sub>2</sub></span>
+                → <span class="compound solid" data-name="Carbonato de Cálcio" data-type="Sólido">CaCO<sub>3</sub></span><sup>↓</sup> +
+                <span class="compound solid" data-name="Carbonato de Magnésio" data-type="Sólido">MgCO<sub>3</sub></span><sup>↓</sup> +
+                <span class="compound liquid" data-name="Água" data-type="Líquido">2H<sub>2</sub>O</span>
+              </div>
+              
+            </div>
+          </section>
+          
           <p>
             Essas reações resultam na formação de carbonato de cálcio (<span
               class="compound solid"
-              >CaCO₃</span
+              data-name="Carbonato de Cálcio" data-type="Sólido">CaCO<sub>3</sub></span
             >) e hidróxido de magnésio (<span class="compound solid"
-              >Mg(OH)<sub>2</sub></span
+            data-name="Hidróxido de Magnésio" data-type="Sólido">Mg(OH)<sub>2</sub></span
             >), que são insolúveis e podem ser removidos por filtração. Esse
             método é eficiente para reduzir a dureza da água, tornando-a mais
             adequada para consumo e uso industrial.
@@ -151,16 +167,27 @@
             <li>Verificar o pH da água.</li>
           </ul>
         </article>
+
         <article class="materials">
           <h3>Materiais</h3>
+          
           <ul>
             <li>Pipeta de Pasteur 3ML</li>
             <li>Luvas descartáveis</li>
             <li>Óculos de Proteção</li>
             <li>Indicador de pH</li>
             <li>Indicador de dureza</li>
-            <li>Cal (<span class="compound">CaO</span>)</li>
-            <li>Bicarbonato de Sódio (<span class="compound">NaHCO₃</span>)</li>
+            <li>Cal (<span class="compound solid" data-name="Cal" data-type="Sólido">CaO</span>)</li>
+            <li>
+              Bicarbonato de Sódio (<span class="compound solid"
+              data-name="Bicarbonato de Sódio" data-type="Sólido">NaHCO<sub>3</sub></span
+              >)
+            </li>
+            <li>Magnésio (<span class="compound solid" data-name="Óxido de Magnésio" data-type="Sólido">Mg0</span>)</li>
+            <li>
+              Cálcio (<span class="compound solid" data-name="Cálcio" data-type="Sólido">CaC0<sub>3</sub></span
+              >)
+            </li>
           </ul>
         </article>
         <article class="procedure">
@@ -168,40 +195,63 @@
           <ol>
             <li>Recipiente de vidro com 1L de água.</li>
             <li>
-              Adição de Cal: Adicione lentamente cal (<span class="compound"
-                >CaO</span
-              >) à água e mexa para dissolver.
+              Dissolva uma pequena quantidade de Cálcio (<span class="compound solid"
+              data-name="Cálcio Carbonato" data-type="Sólido">CaC0<sub>3</sub></span
+              >) em água
             </li>
-            <li>Adição de Magnésio: Adicione óxido de magnésio e mexa.</li>
             <li>
-              Teste da Dureza: Use o indicador de dureza para medir a água.
+              Mexa até a completa dissolução (espere esfriar antes de mexer).
+            </li>
+            <li>
+              Adição de Magnésio: Adicione uma pequena quantidade de óxido de
+              magnésio (<span class="compound solid" data-name="Óxido de Magnésio" data-type="Sólido">Mg0</span>) à água.
+            </li>
+            <li>
+              Mexa a água novamente para garantir que o magnésio (<span
+                class="compound aqueous"
+                data-name="Magnésio" data-type="Aquoso">Mg0</span
+              >) esteja bem dissolvido e distribuído
+            </li>
+            <li>
+              Teste de dureza: Use o indicador de dureza para medir a dureza da
+              água, sendo a partir de 120ppm
             </li>
           </ol>
-          <h3>Procedimento para Amolecimento da Água</h3>
-          <ol>
-            <li>Meça a dureza inicial da água.</li>
+          <h3>Procedimento para Amolecer a Água</h3>
+          <ol class="list-amolecer-agua">
+            <li>Meça a dureza inicial da água com um medidor.</li>
+
             <li>
-              Adicione 0,5 g de cal (<span class="compound">CaO</span>) por
-              litro de água e misture.
+              Meça 0,5 g de cal por litro de água (ex.: 2,5 g para 5 litros).
             </li>
+
             <li>
-              Adicione 1-2 g de bicarbonato de sódio (<span class="compound"
-                >NaHCO₃</span
-              >) e misture.
+              Dissolva a cal em água e adicione à água a ser tratada. Misture
+              bem.
             </li>
-            <li>Deixe a água repousar por 1-2 horas.</li>
-            <li>Filtre a água para remover o precipitado.</li>
-            <li>Meça o pH e a dureza final.</li>
+
+            <li>Adicione 1-2 g de bicarbonato de sódio por litro de água.</li>
+
+            <li>Deixe a água em repouso por 1 a 2 horas para a reação.</li>
+
+            <li>Filtre a água para remover o precipitado formado.</li>
+
+            <li>Meça o pH e ajuste, mantendo-o entre 6 e 9,5.</li>
+
+            <li>Meça a dureza novamente para verificar a redução.</li>
+
+            <li>Armazene a água tratada em recipientes limpos e fechados.</li>
           </ol>
         </article>
         <article class="results">
           <h3>Resultados Esperados</h3>
           <p>
             Neste experimento, pretendemos avaliar a eficácia da cal (<span
-              class="compound"
-              >CaO</span
-            >) e do bicarbonato de sódio (<span class="compound">NaHCO₃</span>)
-            na redução da dureza da água. O objetivo é determinar se essas
+              class="compound solid"
+              data-name="Cal" data-type="Sólido">CaO</span
+            >) e do bicarbonato de sódio (<span class="compound solid"
+              data-name="Bicarbonato de Sódio" data-type="Sólido">NaHCO<sub>3</sub></span
+            >) na redução da dureza da água. O objetivo é determinar se essas
             substâncias podem diminuir a concentração de íons de cálcio e
             magnésio, melhorando a qualidade da água e sua adequação para
             consumo e uso em equipamentos.

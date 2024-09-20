@@ -1,7 +1,8 @@
 :root {
-  --backgound-blue: #0a4d8f;
+  --background-blue: #002959;
 }
 
+/* Regras gerais */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,14 +17,9 @@ body {
 
 /* Cabeçalho */
 header {
-  background-color: var(--backgound-blue);
+  background-color: var(--background-blue);
   padding: 1.5rem 0;
   text-align: center;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
   color: white;
 }
 
@@ -68,16 +64,68 @@ nav > ul > li > a::after {
   height: 1px;
   background-color: #fff;
   left: 0;
-  bottom: -3px; /* Distância do texto */
-  transition: width 0.3s ease-in-out; /* Transição suave */
+  bottom: -3px;
+  transition: width 0.3s ease-in-out;
 }
 
 nav > ul > li > a:hover::after {
   width: 100%;
 }
 
+/* Conteúdo */
 section {
   padding: 20px;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 26px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content > article {
+  margin-bottom: 40px;
+}
+
+.content > h3 {
+  font-size: 1.8rem;
+  color: #3a6ea5;
+  margin-bottom: 15px;
+}
+
+.content > p {
+  margin-bottom: 20px;
+}
+
+.content > ul > li,
+.content > ol > li {
+  margin-bottom: 10px;
+}
+
+/* Processos */
+.process > p {
+  margin-block: 12px;
+}
+
+.process > ol {
+  margin-left: 26px;
+}
+
+.process > ol > li {
+  margin-top: 10px;
+}
+
+/* Resumo */
+.summary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  max-width: 1260px;
+  margin: auto;
 }
 
 .summary-item {
@@ -90,14 +138,13 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.summary-item h3 {
+.summary-item > h3 {
   font-size: 1.8rem;
   color: #3a6ea5;
   margin-bottom: 10px;
 }
 
-/* Formulas e compostos */
-
+/* Fórmulas e Compostos */
 .formulas {
   margin: 20px;
   padding: 20px;
@@ -106,95 +153,127 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para fórmulas químicas */
 .reaction {
-  display: block;
-  font-family: "Courier New", monospace; /* Fonte para fórmulas */
-  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f2f2f2;
+  border-left: 4px solid #3498db;
+  border-radius: 5px;
+}
+
+.formula {
+  font-family: "Courier New", monospace;
+  font-size: 1.3rem;
   color: #333;
-  margin-bottom: 15px;
-  padding: 10px;
-  background-color: #e9f5ff;
-  border-left: 4px solid #3a6ea5;
-  border-radius: 4px;
 }
 
-/* Estilo para os compostos dentro das fórmulas */
-.compound {
-  display: inline-block;
-  margin-right: 5px;
-}
-
-/* Estilo para subscritos e sobrescritos */
-.sub,
-.sup {
+.formula > sub {
   font-size: 0.8rem;
 }
 
-/* Adicionando classe para indicar a fase de precipitação ou outro estado */
-.reaction .compound.solid {
-  color: #28a745;
+.formula > sup {
+  font-size: 0.8rem;
+  color: #e74c3c; 
+}
+
+.tutorial {
+  font-size: 1.1rem; 
+  font-weight: bold; 
+  color: #2d8fdd; 
+  background-color: #f0f8ff; 
+  padding: 10px 15px; 
+  border-left: 4px solid #2d8fdd; 
+  border-radius: 5px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+  cursor: default; 
+}
+
+.compound {
   font-weight: bold;
+  font-family: "Courier New", monospace;
+  font-size: 1.2rem;
+  margin-right: 5px;
+
+  position: relative;
+  cursor: context-menu;
 }
 
-.reaction .compound.liquid {
-  color: #007bff;
-  font-weight: bold;
+.compound:hover::after, .compound.active::after {
+  content: attr(data-name) " - " attr(data-type);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.651);
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+  top: 120%;
+  left: 0;
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 0.9rem;
 }
 
-.reaction .compound.gas {
-  color: #dc3545;
-  font-weight: bold;
+.compound:focus {
+  outline: none;
 }
 
-.reaction .compound.aqueous {
-  color: #fd7e14;
-  font-weight: bold;
+.compound.solid {
+  color: #28a745; /* Verde para sólidos */
 }
 
-/* Conteúdo */
-
-.summary {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-  max-width: 1260px;
-  margin: auto;
+.compound.liquid {
+  color: #007bff; /* Azul para líquidos */
 }
 
-.content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.compound.gas {
+  color: #fd7e14; /* Laranja para gases */
 }
 
-.content article {
-  margin-bottom: 40px;
+.compound.aqueous {
+  color: #6f42c1; /* Roxo para soluções aquosas */
 }
 
-.content h3 {
-  font-size: 1.8rem;
-  color: #3a6ea5;
+.compound > sub, .compound > sup {
+  font-size: 0.8rem;
+}
+
+/* Listas e iterações */
+ul,
+ol {
+  margin-left: 26px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul > li,
+ol > li {
+  margin-top: 10px;
   margin-bottom: 15px;
 }
 
-.content p {
-  margin-bottom: 20px;
+.introduction > ul > li:before {
+  content: "➔";
+  margin-right: 5px;
 }
 
-.content ul,
-.content ol {
-  margin-left: 20px;
-  margin-bottom: 20px;
+.sinais-agua-dura {
+  margin-top: 10px;
+  margin-left: 15px;
 }
 
-.content ul li,
-.content ol li {
-  margin-bottom: 10px;
+.objective > ul > li:before {
+  content: "📌";
+  margin-right: 5px;
+}
+
+.materials > ul > li {
+  list-style-type: disc;
+}
+
+.list-amolecer-agua > li {
+  margin-bottom: 21px;
 }
 
 /* Resultados Esperados */
@@ -205,11 +284,13 @@ section {
   border-radius: 8px;
 }
 
-.results p {
+.results > p {
   margin-bottom: 15px;
+  margin-top: 8px;
+  line-height: 1.5;
 }
 
-/* Container geral do footer */
+/* Rodapé */
 footer {
   background-color: #062e57;
   color: #ffffff;
@@ -263,7 +344,6 @@ footer {
   color: #f0a500;
 }
 
-/* Estilo da parte inferior */
 .footer-bottom {
   text-align: center;
   padding: 20px;
@@ -282,6 +362,40 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
+  header > h2 {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+  }
+
+  header > h1 {
+    font-size: 1.5em;
+    max-width: 90vw;
+    margin: auto;
+  }
+
+  nav > ul > li {
+    margin-inline: 0.9rem;
+  }
+
+  .introduction > p + p {
+    margin-top: 10px;
+  }
+
+  ul,
+  ol {
+    margin-left: 10px;
+  }
+
+  .objective > ul {
+    margin-left: 2px;
+  }
+
+  .compound:hover::after, .compound.active::after {
+    width: 150px;
+    white-space: wrap;
+    font-size: 0.85rem;
+  }
+
   .container-footer {
     flex-direction: column;
     align-items: center;

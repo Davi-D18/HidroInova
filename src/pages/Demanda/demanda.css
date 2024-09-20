@@ -1,5 +1,5 @@
 :root {
-  --backgound-blue: #0a4d8f;
+  --background-blue: #002959;
 }
 
 * {
@@ -19,7 +19,7 @@ main {
 }
 
 header {
-  background: var(--backgound-blue);
+  background: var(--background-blue);
   padding: 1.5rem 0;
   color: #fff;
   text-align: center;
@@ -96,16 +96,8 @@ section > p {
 
 p,
 li {
+  font-family: "Nato Sans", sans-serif;
   line-height: 1.5;
-}
-
-.content-section {
-  background-color: white;
-  padding: 40px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
 }
 
 .highlighted-section {
@@ -116,19 +108,41 @@ li {
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .benefit-card {
   background-color: #e0f2f1;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .benefit-card:hover {
-  transform: translateY(-10px);
+  background-color: #b2dfdb;
+  transform: translateY(-8px);
+}
+
+.benefit-card > h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.benefit-card > p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.content-section {
+  background-color: white;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .plan-section,
@@ -141,7 +155,6 @@ li {
   margin-top: 60px;
   padding: 20px;
   border-radius: 10px;
-  animation: fadeInUp 2s ease-in-out;
 }
 
 .plan-section {
@@ -164,39 +177,6 @@ li {
 .solution-section > ul > li:before {
   content: "📌";
   margin-right: 5px;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 /* Rodapé */
@@ -292,6 +272,18 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
+  header > p {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    max-width: 75vw;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 1.5em;
+  }
+
   header > h1 {
     font-size: 1.5em;
     max-width: 80vw;
@@ -334,17 +326,6 @@ footer {
 
   .benefit-card:hover {
     transform: translateY(0px);
-  }
-
-  header > p {
-    font-size: 0.95rem;
-    margin-bottom: 5px;
-    max-width: 75vw;
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-size: 1.5em;
+    background-color: #e0f2f1;
   }
 }
