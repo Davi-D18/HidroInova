@@ -199,6 +199,36 @@ section {
   cursor: context-menu;
 }
 
+/* Hidróxido de Cálcio */
+.formula > .hydroxide-calcio {
+  color: #4CAF50;
+}
+
+/* Bicarbonato de Cálcio */
+.formula > .bicarbonate-calcio {
+  color: #2196F3;
+}
+
+/* Carbonato de Cálcio */
+.formula > .carbonate-calcio {
+  color: #FF9800;
+}
+
+/* Água */
+.formula > .agua {
+  color: #00BCD4;
+}
+
+/* Hidróxido de Magnésio */
+.formula > .hydroxide-magnesio {
+  color: #8E44AD;
+}
+
+/* Carbonato de Magnésio */
+.formula > .carbonate-magnesio {
+  color: #E74C3C;
+}
+
 .compound:hover::after, .compound.active::after {
   content: attr(data-name) " - " attr(data-type);
   position: absolute;
@@ -219,14 +249,6 @@ section {
 
 .compound.solid {
   color: #28a745; /* Verde para sólidos */
-}
-
-.compound.liquid {
-  color: #007bff; /* Azul para líquidos */
-}
-
-.compound.gas {
-  color: #fd7e14; /* Laranja para gases */
 }
 
 .compound.aqueous {
