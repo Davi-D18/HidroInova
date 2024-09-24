@@ -147,7 +147,7 @@ section:nth-of-type(4) .container-button {
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 950px;
-  margin: 0 auto;
+  margin: 1.4rem auto;
 }
 
 .icon {
