@@ -149,10 +149,7 @@
                   data-type="Sólido"
                   >2CaCO<sub>3</sub></span
                 ><sup>↓</sup> +
-                <span
-                  class="compound agua"
-                  data-name="Água"
-                  data-type="Líquido"
+                <span class="compound agua" data-name="Água" data-type="Líquido"
                   >2H<sub>2</sub>O</span
                 >
               </div>
@@ -186,15 +183,19 @@
                   data-type="Sólido"
                   >MgCO<sub>3</sub></span
                 ><sup>↓</sup> +
-                <span
-                  class="compound agua"
-                  data-name="Água"
-                  data-type="Líquido"
+                <span class="compound agua" data-name="Água" data-type="Líquido"
                   >2H<sub>2</sub>O</span
                 >
               </div>
             </div>
           </section>
+
+          <!-- Modal para mostrar informações do composto -->
+          <div id="infoModal" class="modal">
+            <span class="close">&times;</span>
+            <h2 id="compoundName"></h2>
+            <p id="compoundType"></p>
+          </div>
 
           <p>
             Essas reações resultam na formação de carbonato de cálcio (<span
@@ -387,5 +388,6 @@
         </div>
       </div>
     </footer>
+    <script src="projeto.js"></script>
   </body>
 </html>

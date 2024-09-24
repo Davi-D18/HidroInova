@@ -174,20 +174,20 @@ section {
 
 .formula > sup {
   font-size: 0.8rem;
-  color: #e74c3c; 
+  color: #e74c3c;
 }
 
 .tutorial {
-  font-size: 1.1rem; 
-  font-weight: bold; 
-  color: #2d8fdd; 
-  background-color: #f0f8ff; 
-  padding: 10px 15px; 
-  border-left: 4px solid #2d8fdd; 
-  border-radius: 5px; 
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-  text-align: center; 
-  cursor: default; 
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2d8fdd;
+  background-color: #f0f8ff;
+  padding: 10px 15px;
+  border-left: 4px solid #2d8fdd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: default;
 }
 
 .compound {
@@ -197,40 +197,40 @@ section {
   margin-right: 5px;
 
   position: relative;
-  cursor: context-menu;
+  cursor: default;
 }
 
 /* Hidróxido de Cálcio */
 .formula > .hydroxide-calcio {
-  color: #4CAF50;
+  color: #4caf50;
 }
 
 /* Bicarbonato de Cálcio */
 .formula > .bicarbonate-calcio {
-  color: #2196F3;
+  color: #2196f3;
 }
 
 /* Carbonato de Cálcio */
 .formula > .carbonate-calcio {
-  color: #FF9800;
+  color: #ff9800;
 }
 
 /* Água */
 .formula > .agua {
-  color: #00BCD4;
+  color: #00bcd4;
 }
 
 /* Hidróxido de Magnésio */
 .formula > .hydroxide-magnesio {
-  color: #8E44AD;
+  color: #8e44ad;
 }
 
 /* Carbonato de Magnésio */
 .formula > .carbonate-magnesio {
-  color: #E74C3C;
+  color: #e74c3c;
 }
 
-.compound:hover::after, .compound.active::after {
+.compound:hover::after {
   content: attr(data-name) " - " attr(data-type);
   position: absolute;
   background-color: rgba(0, 0, 0, 0.651);
@@ -245,10 +245,14 @@ section {
   animation: entrada 0.6s ease-out;
 }
 
+.modal {
+  display: none; /* Escondido por padrão */
+}
+
 @keyframes entrada {
   0% {
     opacity: 0;
-    transform: translateY(20px) scale(0.9); 
+    transform: translateY(20px) scale(0.9);
   }
   40% {
     opacity: 0.7;
@@ -272,7 +276,8 @@ section {
   color: #6f42c1; /* Roxo para soluções aquosas */
 }
 
-.compound > sub, .compound > sup {
+.compound > sub,
+.compound > sup {
   font-size: 0.8rem;
 }
 
@@ -429,10 +434,57 @@ footer {
     margin-left: 2px;
   }
 
-  .compound:hover::after, .compound.active::after {
+  .compound:hover::after {
+    content: "";
+    background-color: none;
+    color: none;
+    padding: 0px;
+    border-radius: 0px;
+  }
+
+  .modal {
+    display: none; /* Escondido por padrão */
+    position: absolute; 
+    z-index: 1000; 
+    background-color: white; 
+    padding: 10px 7px; 
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.336);
+    width: 200px; 
+    opacity: 0; 
+    transform: translateY(-20px); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .modal.show {
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+  
+  .modal > h2 {
+    font-size: 1.1rem; 
+    margin-bottom: 7px;
+  }
+  
+  .modal > p {
+    font-size: 1rem; 
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .compound:hover::after {
     width: 150px;
     white-space: wrap;
     font-size: 0.85rem;
+    top: 127%;
+    left: -28px;
   }
 
   .container-footer {
@@ -454,6 +506,10 @@ footer {
 @media (max-width: 481px) {
   .footer-section > h4 {
     font-size: 16px;
+  }
+
+  section {
+    padding: 20px 10px;
   }
 
   .footer-section > p,
