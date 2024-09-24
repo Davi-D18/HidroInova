@@ -39,21 +39,28 @@ function handleCompoundClick() {
   // Calcula a posição do modal acima do composto
   const rect = this.getBoundingClientRect();
   const modalHeight = modal.offsetHeight; // Altura do modal
+  const modalWidth = modal.offsetWidth; // Largura do modal
   const offset = 10; // Espaçamento acima do elemento
 
   // Define a posição do modal
-  const centerX = rect.left + rect.width / 2 - modal.offsetWidth / 2; // Centraliza horizontalmente
-  modal.style.left = `${centerX + window.scrollX}px`; // Ajusta a posição horizontal
-  modal.style.top = `${rect.top + window.scrollY - modalHeight - offset}px`; // Ajusta a posição vertical
+  const centerX = rect.left + rect.width / 2 - modalWidth / 2; // Centraliza horizontalmente
+  let modalTop = rect.top + window.scrollY - modalHeight - offset; // Posição vertical inicial
 
-  // Adiciona a classe correspondente ao estado do composto
-  if (state === "Sólido") {
-    compoundState.classList.add("solid");
-    compoundState.classList.remove("aqueous");
-  } else if (state === "Aquoso") {
-    compoundState.classList.add("aqueous");
-    compoundState.classList.remove("solid");
+  // Verifica se o modal ultrapassa o topo da janela
+  if (modalTop < 0) {
+    modalTop = rect.bottom + window.scrollY + offset; // Mova o modal para baixo do elemento
   }
+
+  // Ajusta a posição horizontal se o modal ultrapassa as bordas da tela
+  if (centerX < 0) {
+    modal.style.left = "0px"; // Ajusta para o lado esquerdo da tela
+  } else if (centerX + modalWidth > window.innerWidth) {
+    modal.style.left = `${window.innerWidth - modalWidth}px`; // Ajusta para o lado direito da tela
+  } else {
+    modal.style.left = `${centerX + window.scrollX}px`; // Ajusta a posição horizontal normal
+  }
+
+  modal.style.top = `${modalTop}px`; // Ajusta a posição vertical
 }
 
 // Fecha o modal quando o usuário clica no "x"
