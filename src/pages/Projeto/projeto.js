@@ -2,7 +2,7 @@
 const modal = document.getElementById("infoModal");
 const compoundName = document.getElementById("compoundName");
 const compoundType = document.getElementById("compoundType");
-const compoundState = document.querySelector(".modal > p"); // O parágrafo no modal para o estado do composto
+const compoundState = document.querySelector(".modal > p");
 
 // Função para abrir o modal
 function openModal(name, type) {
@@ -31,7 +31,6 @@ function applyModalBehavior() {
 function handleCompoundClick() {
   const name = this.getAttribute("data-name");
   const type = this.getAttribute("data-type");
-  const state = this.getAttribute("data-state"); // Pega o estado diretamente do atributo
 
   // Abre o modal com as informações do composto
   openModal(name, type);

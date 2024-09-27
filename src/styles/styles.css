@@ -327,8 +327,12 @@ footer {
 
   section:nth-child(1),
   section:nth-child(2) {
-    height: 269px;
+    height: 265px;
     padding: 1rem;
+  }
+
+  section:nth-child(2) .container-button {
+    margin-top: 0.7rem;
   }
 
   section:nth-of-type(4) .container-button {
