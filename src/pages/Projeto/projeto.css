@@ -282,8 +282,8 @@ section {
 }
 
 /* Listas e iterações */
-ul,
-ol {
+article > ul,
+article > ol {
   margin-left: 26px;
 }
 

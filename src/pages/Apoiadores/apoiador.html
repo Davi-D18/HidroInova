@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../assets/favicon/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Equipe</title>
+    <link rel="stylesheet" href="apoiador.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Apoiadores</h1>
+      <nav>
+        <ul>
+          <li><a href="../../../index.html">Início</a></li>
+          <li><a href="../Equipe/equipe.html">Equipe</a></li>
+          <li><a href="../Demanda/demanda.html">Demanda</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <p class="apoio">Destinado a destacar todos que colaboraram de alguma maneira no processo de concepção e produção do nosso projeto.</p>
+
+      <section class="team-section">
+        <!-- Cada membro da equipe é um "card" -->
+        <div
+          class="team-supporters"
+          data-name="Gregório Monteiro"
+          data-role="Coord. Pedagógico"
+          data-description="Agradecimento pelo acompanhamento do projeto, supervisão de todas as etapas, desde o início, do levantamento de ideias, escolha de materiais e suporte para a montagem do protótipo do sistema automatizado de filtragem."
+          data-img="../../assets/images/apoiadores/gregorio.jpg"
+        >
+          <img
+            src="../../assets/images/apoiadores/gregorio.jpg"
+            alt="Foto de André Jr. Fontenele"/>
+          <h2>Gregório Monteiro</h2>
+          <p>Coord. Pedagógico</p>
+        </div>
+
+        <div
+          class="team-supporters"
+          data-name="Fernando Costa"
+          data-role="Montagem do Protótipo"
+          data-description="Nosso imenso obrigado ao professor Fernando, pelo profissionalismo, atenção e dedicação para com a montagem do nosso sistema de filtragem de água dura. Agradecer também aos seus alunos dos turnos tarde e noite pelo incrível suporte dado à nossa equipe na produção do nosso humilde protótipo."
+          data-img="../../assets/images/apoiadores/fernando.jpg"
+        >
+          <img
+            src="../../assets/images/apoiadores/fernando.jpg"
+            alt="Foto de Edivan Conrado Jr."/>
+          <h2>Fernando Costa</h2>
+          <p>Professor do Curso de Eletricista</p>
+        </div>
+
+        <div
+          class="team-supporters"
+          data-name="Francisco Alves"
+          data-role="Contribuição com a programação do Arduíno"
+          data-description="Nossos agradecimentos ao professor Francisco, pela indispensável ajuda e colaboração prestada na programação do sistema de arduino, acelerando nossa compreensão quanto ao uso e manipulação da automação que envolve nosso protótipo."
+          data-img="../../assets/images/apoiadores/francisco.jpg"
+        >
+          <img
+            src="../../assets/images/apoiadores/francisco.jpg"
+            alt="Foto de Francisco Alves"/>
+          <h2>Francisco Alves</h2>
+          <p>Eletricista</p>
+        </div>
+
+        <div
+          class="team-supporters"
+          data-name="Saul Moraes"
+          data-role="Professor do Curso de Técnico em Administração"
+          data-description="Fica nosso obrigado pela compreensão e paciência pelas ausências em aula, para podermos nos reunir e se dedicar à produção do projeto."
+          data-img="../../assets/images/apoiadores/saul.jpg"
+        >
+          <img
+            src="../../assets/images/apoiadores/saul.jpg"
+            alt="Foto de Saul"/>
+          <h2>Saul Moraes</h2>
+          <p>Professor do Curso de Técnico em Administração</p>
+        </div>
+      </section>
+
+      <!-- Modal para informações expandidas -->
+      <div class="overlay" id="overlay">
+        <div class="overlay-content">
+          <button class="close-btn" id="closeBtn">&times;</button>
+          <img id="overlayImg" src="" alt="Foto do Membro"/>
+          <h2 id="overlayName"></h2>
+          <p id="overlayRole"></p>
+          <p id="overlayDescription"></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="footer-section">
+          <h4>Sobre Nós</h4>
+          <p>
+            Fornecemos soluções sustentáveis e acessíveis para o tratamento de
+            água e preservação ambiental.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="../../../index.html">Início</a></li>
+            <li><a href="../Equipe/equipe.html">Equipe</a></li>
+            <li><a href="../Demanda/demanda.html">Demanda</a></li>
+            <li><a href="./apoiador.html">Apoiadores</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <ul>
+            <li class="numero">
+              <a href="https://wa.me/qr/DS2USKWSE7OKN1" target="_blank"
+                >+55 86 9589-1652</a
+              >
+            </li>
+            <li class="email">hidro.inova.solutions@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./apoiador.js"></script>
+  </body>
+</html>
