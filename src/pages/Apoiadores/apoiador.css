@@ -92,18 +92,18 @@ header > nav > ul > li > a:hover::after {
   grid-template-columns: repeat(2, 1fr); /* 2 colunas para notebooks */
   column-gap: 3rem;
   row-gap: 1.2rem;
-  max-width: 950px;
+  max-width: 850px;
   margin: auto;
 }
 
-/* Estilização dos cartões de membros */
+/* Estilização dos cartões de apoiadores */
 .team-supporters {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 15px;
-  padding: 20px;
-  width: 100%;
+  padding: 20px 10px;
+  width: 95%;
   text-align: center;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -144,6 +144,7 @@ header > nav > ul > li > a:hover::after {
   font-size: 1em;
   color: #666;
   margin-top: 10px;
+  line-height: 1;
 }
 
 .team-supporters {
@@ -328,6 +329,7 @@ footer {
   .team-section {
     grid-template-columns: 1fr;
     justify-items: center;
+    max-width: 550px;
   }
 
   .team-supporters {
